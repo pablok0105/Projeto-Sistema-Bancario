@@ -18,5 +18,18 @@ class ContaTest {
 
 		co = new Conta();
 	}
+@DisplayName("Teste Saque")
+	@Test
+	public void testSacar() {
+
+		boolean b;
+
+		b = co.Sacar(0.0);
+		assertTrue(b);
+
+		b = co.Sacar(1.0);
+		assertFalse(b);
+
+	}
 
 }
