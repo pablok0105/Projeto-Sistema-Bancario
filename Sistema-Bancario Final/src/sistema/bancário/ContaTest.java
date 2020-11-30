@@ -95,5 +95,24 @@ class ContaTest {
 		assertFalse(b);
 
 	}
+	
+	@DisplayName("Teste Fechar")
+	@Test
+	public void testFechar() {
+
+		boolean a;
+
+		a = co.Fechar(8);
+		assertTrue(a);
+
+		a = co.Fechar(7);
+		assertFalse(a);
+		
+		a = co.Fechar(0);
+		assertFalse(a);
+		
+		a = co.Fechar(1);
+		assertFalse(a);
+	}
 }
 
