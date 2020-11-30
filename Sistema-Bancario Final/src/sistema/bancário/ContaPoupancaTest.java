@@ -46,4 +46,20 @@ class ContaPoupancaTest {
 		assertFalse(b);
 
 	}
+	@DisplayName("Teste Gerar Boleto")
+	@Test
+	public void testGerarBoleto() {
+
+		boolean a;
+
+		a = cp.gerarBoleto(cp.validarNumeroBoleto("123456789123456"));
+		assertTrue(a);
+
+		a = cp.gerarBoleto(cp.validarNumeroBoleto("123"));
+		assertFalse(a);
+
+		a = cp.gerarBoleto(cp.validarNumeroBoleto("12345678912345678"));
+		assertFalse(a);
+
+	}
 }
