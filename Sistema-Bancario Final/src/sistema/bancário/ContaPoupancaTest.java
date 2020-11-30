@@ -95,5 +95,57 @@ class ContaPoupancaTest {
 			assertEquals(60.0, cp.getSaldo());
 
 		}
+	
+		@DisplayName("Teste Saque Poupanca")
+	@Test
+	public void testSaquePoupanca() {
+
+		boolean a;
+
+		if (cp.abrirContaP("pablo", "12345")) {
+			a = cp.Sacar(10.0);
+			assertTrue(a);
+		}
+
+		if (cp.abrirContaP("pablo", "12345")) {
+			a = cp.Sacar(60.0);
+			assertFalse(a);
+		}
+
+		if (cp.abrirContaP("pablo", "12345")) {
+			a = cp.Sacar(50.0);
+			assertTrue(a);
+		}
+
+	}
+		@DisplayName("Teste Dados Poupanca")
+	@Test
+	public void testMostrarDadosPoupanca() {
+
+		boolean b;
+
+		b = cp.mostrarDadosPoupanca(1);
+		assertTrue(b);
+		b = cp.mostrarDadosPoupanca(2);
+		assertFalse(b);
+		b = cp.mostrarDadosPoupanca(3);
+		assertFalse(b);
+	}
+
+	@DisplayName("Teste Validaçao de Numero")
+	@Test
+	public void testValidarNumero() {
+
+		String n;
+		
+		n = cp.validarNumeroP("123");
+		assertEquals("123", n);
+		
+		n = cp.validarNumeroP("1234");
+		assertNotEquals("123" , n);
+		
+		n = cp.validarNumeroP("123456");
+		assertEquals(null , n);
+		
 	}
 }
