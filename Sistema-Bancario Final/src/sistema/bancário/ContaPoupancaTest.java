@@ -62,4 +62,23 @@ class ContaPoupancaTest {
 		assertFalse(a);
 
 	}
+	
+	@DisplayName("Teste Pagar Boleto")
+	@Test
+	public void testPagarBoleto() {
+
+		// NumeroBoleto = a;
+		// Saldo = b ;
+		// ValorBoleto = c;
+
+		String a1;
+
+		a1 = cp.validarNumeroBoleto("123456789123456");
+
+//							(numeroBoleto, Saldo, ValorBoleto)
+		assertEquals(cp.pagarBoleto(null, 0.0, 0.0), 1);
+		assertEquals(cp.pagarBoleto(a1, 10.0, 5.0), 2);
+		assertEquals(cp.pagarBoleto(a1, 5.0, 10.0), 3);
+
+	}
 }
