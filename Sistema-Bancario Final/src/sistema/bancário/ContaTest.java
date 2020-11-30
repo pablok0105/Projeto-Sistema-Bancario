@@ -31,5 +31,15 @@ class ContaTest {
 		assertFalse(b);
 
 	}
+@DisplayName("Teste Deposito")
+	@Test
+	public void testDepositar() {
 
+		double a;
+
+		a = co.Depositar(10.0);
+		assertEquals(10.0, a);
+		assertEquals(co.getSaldo(), a);
+		
+	}
 }
