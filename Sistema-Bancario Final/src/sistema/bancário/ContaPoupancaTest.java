@@ -33,4 +33,17 @@ class ContaPoupancaTest {
 
 	}
 
+	@DisplayName("Teste Abrir Conta Poupanca")
+	@Test
+	public void testAbrirContaoP() {
+
+		boolean b;
+
+		b = cp.abrirContaP(cp.validarNome("Pablo Emanuel"), cp.validarNome("12345"));
+		assertTrue(b);
+
+		b = cp.abrirContaP(cp.validarNome("Pablo Emanuel Pablo Pablo Pablo Pablo"), cp.validarNumeroP("123456"));
+		assertFalse(b);
+
+	}
 }
