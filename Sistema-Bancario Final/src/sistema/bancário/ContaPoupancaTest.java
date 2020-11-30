@@ -81,4 +81,19 @@ class ContaPoupancaTest {
 		assertEquals(cp.pagarBoleto(a1, 5.0, 10.0), 3);
 
 	}
+	@DisplayName("Teste Deposito Poupanca")
+	@Test
+	public void testDepositoPoupanca() {
+
+		// NumeroBoleto = a;
+		// Saldo = b ;
+		// ValorBoleto = c;
+
+		if (cp.abrirContaP("pablo", "12345")) {
+
+			cp.Depositar(10.0);
+			assertEquals(60.0, cp.getSaldo());
+
+		}
+	}
 }
