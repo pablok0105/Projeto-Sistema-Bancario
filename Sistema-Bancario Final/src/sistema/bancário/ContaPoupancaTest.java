@@ -18,5 +18,19 @@ class ContaPoupancaTest {
 
 		cp = new ContaPoupanca();
 	}
+	
+	@DisplayName("Teste Validaçao do Numero do Boleto")
+	@Test
+	public void testvalidarNumeroBoleto() {
+
+		String e, e1;
+
+		e = cp.validarNumeroBoleto("123456789234567");
+		assertEquals(cp.getNumeroBoleto(), e);
+
+		e1 = cp.validarNumeroBoleto("123456789");
+		assertEquals(null, e1);
+
+	}
 
 }
