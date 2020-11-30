@@ -94,7 +94,7 @@ class ContaPoupancaTest {
 			cp.Depositar(10.0);
 			assertEquals(60.0, cp.getSaldo());
 
-		}
+}}
 	
 		@DisplayName("Teste Saque Poupanca")
 	@Test
