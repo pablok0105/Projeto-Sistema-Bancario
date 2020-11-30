@@ -54,6 +54,25 @@ class ContaTest {
 
 		p2 = co.validarNome("Pablo Santana Da Silva Neto Pablo Santana Da Silva Neto Pablo Santana Da Silva Neto");
 		assertEquals(null, p2);
+	}
+	
+	@DisplayName("Teste Validaçao de Entrada")
+	@Test
+	public void testvalidarEntrada() {
+
+		boolean r, r1, r3, r4;
+
+		r = co.validarEntrada(0);
+		assertTrue(r);
+
+		r1 = co.validarEntrada(3);
+		assertFalse(r1);
+
+		r3 = co.validarEntrada(9);
+		assertTrue(r3);
+
+		r4 = co.validarEntrada(8);
+		assertFalse(r4);
 
 	}
 }
