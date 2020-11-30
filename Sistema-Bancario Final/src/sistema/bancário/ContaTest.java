@@ -75,5 +75,25 @@ class ContaTest {
 		assertFalse(r4);
 
 	}
+	
+	@DisplayName("Teste Dados Banco")
+	@Test
+	public void testMostrarDadosBanco() {
+
+		boolean b;
+
+		b = co.mostrarDadosBanco(3);
+		assertTrue(b);
+
+		b = co.mostrarDadosBanco(1);
+		assertFalse(b);
+
+		b = co.mostrarDadosBanco(2);
+		assertFalse(b);
+
+		b = co.mostrarDadosBanco(0);
+		assertFalse(b);
+
+	}
 }
 
