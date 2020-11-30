@@ -42,4 +42,19 @@ class ContaTest {
 		assertEquals(co.getSaldo(), a);
 		
 	}
+	@DisplayName("Teste Validaçao de Nome")
+	@Test
+	public void testValidarNome() {
+
+		String p1, p2;
+		p1 = co.validarNome("Pablo");
+		co.getTitular();
+
+		assertEquals(co.getTitular(), p1);
+
+		p2 = co.validarNome("Pablo Santana Da Silva Neto Pablo Santana Da Silva Neto Pablo Santana Da Silva Neto");
+		assertEquals(null, p2);
+
+	}
 }
+
